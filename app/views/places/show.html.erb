@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @place %>
+
+<div>
+  <%= link_to "Add rating to this place", new_place_place_rating_path(place_id: @place.id) %> |
+  <%= link_to "Edit this place", edit_place_path(@place) %> |
+  <%= link_to "Back to places", places_path %>
+
+  <%= button_to "Destroy this place", @place, method: :delete %>
+</div>
